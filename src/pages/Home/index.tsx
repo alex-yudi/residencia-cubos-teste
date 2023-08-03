@@ -1,9 +1,10 @@
 import { useContextSelector } from 'use-context-selector'
+import { HeroLeft } from '../../components/HeroLeft'
+import { ExamplesContext } from '../../stores/contexts/counterStore'
 import { useSammary } from '../../stores/hooks/useSummary'
 import {
   HomeContainer,
 } from './styles'
-import { ExamplesContext } from '../../stores/contexts/counterStore'
 
 export function Home() {
   const results = useContextSelector(

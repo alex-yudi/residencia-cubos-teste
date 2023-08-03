@@ -2,13 +2,13 @@
   "env": {
     "browser": true,
     "es2021": true,
-    "jest": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "standard",
-    "plugin:prettier/recommended",
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -33,7 +33,7 @@
         "trailingComma": "all",
         "arrowParens": "always",
         "semi": false,
-        "endOfLine": "auto",
+        "endOfLine": "auto"
       }
     ],
     "react/react-in-jsx-scope": "off",
@@ -46,8 +46,8 @@
         ],
         "img": [
           "Image"
-        ],
-      },
+        ]
+      }
     ],
     "jsx-a11y/aria-props": "warn",
     "jsx-a11y/aria-proptypes": "warn",
@@ -57,13 +57,13 @@
   },
   "settings": {
     "react": {
-      "version": "detect",
+      "version": "detect"
     },
     "import/parsers": {
       "@typescript-eslint/parser": [
         ".ts",
         ".tsx"
-      ],
-    },
+      ]
+    }
   }
 }

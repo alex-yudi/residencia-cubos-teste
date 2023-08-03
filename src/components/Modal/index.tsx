@@ -13,6 +13,8 @@ import {
   ExampleType,
   ExampleTypeButton,
 } from './styles'
+
+
 import { ExamplesContext } from '../../stores/contexts/counterStore'
 
 const newExampleFormSchema = z.object({
@@ -58,14 +60,14 @@ export function NewExampleModal() {
       createdAt: new Date(),
     }
 
-    await createCount(newExample)
+    await createCount(newExample) /*Com uma api criada, envia para registro em BD da conta realizada.*/
 
     reset()
   }
 
   return (
-    <Dialog.Portal>
-      <Overlay />
+    <Dialog.Portal> {/* A Dialog é o Modal do RadixUi */}
+      <Overlay /> {/* O Overlay é criado no styles, trata-se do fundo do Modal.*/}
 
       <Content>
         <Dialog.Title>Novo Calculo</Dialog.Title>
