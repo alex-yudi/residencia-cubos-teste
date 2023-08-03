@@ -1,10 +1,11 @@
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components'; // Isso é do Styled components
+
 import { BrowserRouter } from 'react-router-dom';
 
-import { GlobalStyle } from './styles/global'
-import { defaultTheme } from './styles/themes/default'
-import { AppProvider } from './stores/contexts'
 import { Router } from './Router';
+import { AppProvider } from './stores/contexts';
+import { GlobalStyle } from './styles/global';
+import { defaultTheme } from './styles/themes/default';
 
 export function App() {
   return (

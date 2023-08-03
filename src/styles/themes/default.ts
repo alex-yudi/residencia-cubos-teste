@@ -4,4 +4,8 @@ export const defaultTheme = {
   purple100: '#B080F2',
   gray900: '#2F3040',
   white100: '#F2F2F2',
+  bgPage: '#D9E6F6',
+  footerColor: '#BBCDE8',
+  primaryFontColor: '#333',
+  linkFontColor: '#2E7BB4'
 } as const
