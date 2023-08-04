@@ -33,31 +33,29 @@ export function LoginForm(){
     }
 
     return(
-        <>
-            <ContainerForm
-                title={titleText()}
-                buttonText = {'Login'}
-                handleSubmitComponent={handleSubmit((data: LoginFormInputs) => {console.log(data); reset()})}
-            >
+        <ContainerForm
+            title={titleText()}
+            buttonText = {'Login'}
+            handleSubmitComponent={handleSubmit((data: LoginFormInputs) => {console.log(data); reset()})}
+        >
                 
-                    <InputForm 
-                        {...register('email')}
-                        type="email"
-                        placeholder='Digite seu e-mail'
-                        required 
-                    />
-                    <InputForm 
-                        {...register('password')}
-                        type="password"
-                        placeholder='Digite sua senha'
-                        required 
-                    />
+            <InputForm 
+                {...register('email')}
+                type="email"
+                placeholder='Digite seu e-mail'
+                required 
+            />
+            <InputForm 
+                {...register('password')}
+                type="password"
+                placeholder='Digite sua senha'
+                required 
+            />
 
-                    <LinkForgotPassword>
-                        Esqueceu a senha?
-                    </LinkForgotPassword>
+            <LinkForgotPassword>
+                Esqueceu a senha?
+            </LinkForgotPassword>
                 
-            </ContainerForm>
-        </>
+        </ContainerForm>
     )
 }
