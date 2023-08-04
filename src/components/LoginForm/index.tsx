@@ -73,7 +73,7 @@ export function LoginForm(){
                 required 
             />
 
-            <LinkForgotPassword onClick={() => navigateTo('/recover-pass')}>
+            <LinkForgotPassword onClick={() => navigateTo('/recover-password')}>
                 Esqueceu a senha?
             </LinkForgotPassword>
                 

@@ -12,7 +12,7 @@ export function Router() {
         <Route path='/' element={<Navigate to='/login'/>} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/recover-pass' element={<PasswordReset />} />
+        <Route path='/recover-password' element={<PasswordReset />} />
         <Route path='/new-password' element={<NewPassword />} />
       </Route>
     </Routes>

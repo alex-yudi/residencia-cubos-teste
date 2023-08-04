@@ -15,6 +15,11 @@ export const FormContainer = styled.form`
     @media(max-width: 1180px) {
         min-width: 45%;
     }
+
+    @media(max-width: 490px) {
+        width: 21.5625rem;
+        height: 22.875rem;
+    }
 `
 export const FormTitle = styled.p`
     margin-top: 2rem;
