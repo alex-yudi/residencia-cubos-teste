@@ -6,7 +6,7 @@ import { NewProvider } from './newStore';
 interface AppProviderProps {
   children: ReactNode
 }
-
+/* 
 export function AppProvider({ children }: AppProviderProps) { // Esse que vai ser responsável por encapsular todos os contextos existentes.
   
   return (
@@ -17,4 +17,12 @@ export function AppProvider({ children }: AppProviderProps) { // Esse que vai se
     </AuthProvider>
   );
 }
-
+ */
+export function AppProvider({ children }: AppProviderProps) { // Esse que vai ser responsável por encapsular todos os contextos existentes.
+  
+  return (
+      <NewProvider>
+          {children}
+      </NewProvider>
+  );
+}

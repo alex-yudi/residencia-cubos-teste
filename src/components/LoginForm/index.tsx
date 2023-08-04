@@ -17,6 +17,7 @@ type LoginFormInputs = z.infer<typeof loginFormSchema>
 export function LoginForm(){
 
     const {
+        reset,
         register,
         handleSubmit
         } = useForm<LoginFormInputs>({
@@ -36,12 +37,12 @@ export function LoginForm(){
             <ContainerForm
                 title={titleText()}
                 buttonText = {'Login'}
-                handleSubmitComponent={handleSubmit((data: LoginFormInputs) => {console.log(data)})}
+                handleSubmitComponent={handleSubmit((data: LoginFormInputs) => {console.log(data); reset()})}
             >
                 
                     <InputForm 
                         {...register('email')}
-                        type="text"
+                        type="email"
                         placeholder='Digite seu e-mail'
                         required 
                     />
