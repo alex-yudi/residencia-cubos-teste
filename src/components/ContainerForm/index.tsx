@@ -1,56 +1,26 @@
-import { zodResolver } from '@hookform/resolvers/zod'
-import {useForm} from 'react-hook-form'
-import * as z from 'zod'
 import { FormContainer, FormTitle,ContainerInputs, InputForm, LinkForgotPassword, Button } from './style'
+import { ReactElement } from 'react'
 
-const loginFormSchema = z.object({
-    email: z.string().trim().toLowerCase(),
-    password: z.string()
-})
+interface PropsContainerForm {
+    title: ReactElement | string;
+    buttonText: string;
+    children: any;
+    handleSubmitComponent: any;
+}
 
-type LoginFormInputs = z.infer<typeof loginFormSchema>
-
-export function ContainerForm() {
-    const {
-        reset, 
-        register,
-        handleSubmit
-        } = useForm<LoginFormInputs>({
-                resolver: zodResolver(loginFormSchema)
-             })
-
-    const handleDoLogin = (data: LoginFormInputs) => {
-        console.log('Deu certo')
-    } 
-
+export function ContainerForm(props: PropsContainerForm) {
     return(
-        <FormContainer onSubmit={handleSubmit(handleDoLogin)}>
+        <FormContainer onSubmit={props.handleSubmitComponent}>
             <FormTitle>
-            Acesse o login <br/>
-            com seu usuário do Github
+            {props.title}
             </FormTitle>
 
             <ContainerInputs>
-                <InputForm 
-                    {...register('email')}
-                    type="text"
-                    placeholder='Digite seu e-mail'
-                    required 
-                />
-                <InputForm 
-                    {...register('password')}
-                    type="password"
-                    placeholder='Digite sua senha'
-                    required 
-                />
-
-                <LinkForgotPassword>
-                    Esqueceu a senha?
-                </LinkForgotPassword>
+                {props.children}
             </ContainerInputs>
 
             <Button type="submit">
-                Login
+                {props.buttonText}
             </Button>
         </FormContainer>
     )
