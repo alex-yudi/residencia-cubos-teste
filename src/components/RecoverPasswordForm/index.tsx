@@ -5,6 +5,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import {useForm} from 'react-hook-form'
 import * as z from 'zod'
 
+import { useNavigate } from "react-router-dom";
+
 const recoverPasswordSchema = z.object({
     email: z.string()
 })
@@ -21,6 +23,8 @@ export function RecoverPasswordForm() {
         } = useForm<RecoverPasswordInput>({
                 resolver: zodResolver(recoverPasswordSchema)
              })
+    
+    const navigateTo = useNavigate()
 
     const titleText = () => {
         return (
@@ -30,11 +34,17 @@ export function RecoverPasswordForm() {
         )
     }
 
+    const handleRecoverPassword = (data: RecoverPasswordInput) => {
+        console.log(data); 
+        navigateTo('/new-password')
+        reset()
+    }
+
     return (
         <ContainerForm
             title={titleText()}
             buttonText='Enviar'
-            handleSubmitComponent={handleSubmit((data: RecoverPasswordInput) => {console.log(data); reset()})}
+            handleSubmitComponent={handleSubmit(handleRecoverPassword)}
         >
             <InputForm 
                 {...register('email')}

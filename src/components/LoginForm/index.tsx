@@ -57,8 +57,7 @@ export function LoginForm(){
         <ContainerForm
             title={titleText()}
             buttonText = {'Login'}
-            handleSubmitComponent={handleSubmit(handleSubmitForm)
-            }
+            handleSubmitComponent={handleSubmit(handleSubmitForm)}
         >
                 
             <InputForm 

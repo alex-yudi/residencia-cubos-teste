@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import {useForm} from 'react-hook-form'
 import * as z from 'zod'
 
-import { api } from "../../lib/axios";
+import { useNavigate } from "react-router-dom";
 
 const newPasswordSchema = z.object({
     password: z.string(),
@@ -24,6 +24,8 @@ export function NewPasswordForm() {
                 resolver: zodResolver(newPasswordSchema)
              })
 
+    const navigateTo = useNavigate()
+
     const titleText = () => {
         return (
             <>
@@ -31,15 +33,18 @@ export function NewPasswordForm() {
             </>
         )
     }
+    
+    const handleNewPassword = (data: NewPasswordFormInputs) => {
+        console.log(data);
+        navigateTo('/login')
+        reset()
+    }
 
     return (
         <ContainerForm
             title={titleText()}
             buttonText = 'Login'
-            handleSubmitComponent={handleSubmit((data: NewPasswordFormInputs) => {
-                console.log(data); 
-                reset()
-            })}
+            handleSubmitComponent={handleSubmit(handleNewPassword)}
         >
 
             <InputForm 
