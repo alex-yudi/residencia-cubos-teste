@@ -11,6 +11,10 @@ export const FormContainer = styled.form`
 
     border-radius: 0.5rem;
     background: ${(props) => props.theme['bgForm']};
+
+    @media(max-width: 1180px) {
+        min-width: 45%;
+    }
 `
 export const FormTitle = styled.p`
     margin-top: 2rem;
