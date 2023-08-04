@@ -40,8 +40,8 @@ export function LoginForm(){
             const {githubUser} = data
 
             const {data: responseApi} = await api.get(`/${githubUser}`);
-        
-            console.log(responseApi)
+            
+            localStorage.setItem('githubUser', githubUser)
 
             reset()
         } catch (error:any) {
