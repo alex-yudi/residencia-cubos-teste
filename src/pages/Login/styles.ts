@@ -6,4 +6,3 @@ export const LoginContainer = styled.main`
   max-width: 1120px;
   padding: 0 1.5rem;
 ` */
-
