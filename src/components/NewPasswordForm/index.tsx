@@ -5,6 +5,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import {useForm} from 'react-hook-form'
 import * as z from 'zod'
 
+import { api } from "../../lib/axios";
+
 const newPasswordSchema = z.object({
     password: z.string(),
     passwordConfirmation: z.string()
@@ -34,7 +36,10 @@ export function NewPasswordForm() {
         <ContainerForm
             title={titleText()}
             buttonText = 'Login'
-            handleSubmitComponent={handleSubmit((data: NewPasswordFormInputs) => {console.log(data); reset()})}
+            handleSubmitComponent={handleSubmit((data: NewPasswordFormInputs) => {
+                console.log(data); 
+                reset()
+            })}
         >
 
             <InputForm 
