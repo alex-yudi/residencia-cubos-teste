@@ -1,4 +1,4 @@
-import { useContextSelector } from 'use-context-selector'
+/* import { useContextSelector } from 'use-context-selector'
 import {
   LoginContainer,
 } from './styles'
@@ -44,5 +44,16 @@ export function Login() {
         </form>
       </LoginContainer>
     </div>
+  )
+}
+ */
+
+import { ContainerForm } from "../../components/ContainerForm";
+
+export function Login() {
+  return (
+    <>
+    <ContainerForm/>
+    </>
   )
 }
