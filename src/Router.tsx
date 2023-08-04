@@ -3,6 +3,7 @@ import { Default } from './layouts/Default';
 import { Login } from './pages/Login';
 import { SignUp } from './pages/SignUp';
 import { PasswordReset } from './pages/PasswordReset';
+import { NewPassword } from './pages/NewPassword';
 
 export function Router() {
   return (
@@ -11,6 +12,7 @@ export function Router() {
         <Route path='/' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/recover-pass' element={<PasswordReset />} />
+        <Route path='/new-password' element={<NewPassword />} />
       </Route>
     </Routes>
   )
