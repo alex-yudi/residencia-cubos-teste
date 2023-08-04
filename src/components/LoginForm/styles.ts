@@ -4,7 +4,7 @@ export const InputForm = styled.input`
     width: 13.0625rem;
     height: 2rem;
     padding-left: 1rem;
-    margin-bottom: 0.81rem;
+    margin-bottom: 0.5rem;
 
     border-radius: 0.5rem;
     border: 1px solid #C5C6CA;
@@ -16,8 +16,9 @@ export const InputForm = styled.input`
 `
 
 export const LinkForgotPassword = styled.a`
-    font-size: 0.5625rem;
+    font-size: 0.6rem;
     color: #2E7BB4;
+    margin-bottom: 0.3rem;
 
     &:hover {
         cursor: pointer;

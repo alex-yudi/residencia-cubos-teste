@@ -4,6 +4,8 @@ import { InputForm, LinkForgotPassword } from "./styles";
 import { zodResolver } from '@hookform/resolvers/zod'
 import {useForm} from 'react-hook-form'
 import * as z from 'zod'
+import { api } from "../../lib/axios";
+import { useNavigate } from "react-router-dom";
 
 const loginFormSchema = z.object({
     githubUser: z.string(),
@@ -11,7 +13,6 @@ const loginFormSchema = z.object({
 })
 
 type LoginFormInputs = z.infer<typeof loginFormSchema>
-
 
 
 export function LoginForm(){
@@ -23,6 +24,8 @@ export function LoginForm(){
         } = useForm<LoginFormInputs>({
                 resolver: zodResolver(loginFormSchema)
              })
+    
+    const navigateTo = useNavigate()
 
     const titleText = () => {
         return (
@@ -32,11 +35,30 @@ export function LoginForm(){
         )
     }
 
+    const handleSubmitForm = async(data: LoginFormInputs) => {
+        try {
+            const {githubUser} = data
+
+            const {data: responseApi} = await api.get(`/${githubUser}`);
+        
+            console.log(responseApi)
+
+            reset()
+        } catch (error:any) {
+            if(error.response.data.message === 'Not Found'){
+                alert('Usuário informado não encontrado.')
+            } else {
+                alert('Houve um erro inesperado, por favor tente novamente mais tarde.')
+            }
+        }
+    }
+
     return(
         <ContainerForm
             title={titleText()}
             buttonText = {'Login'}
-            handleSubmitComponent={handleSubmit((data: LoginFormInputs) => {console.log(data); reset()})}
+            handleSubmitComponent={handleSubmit(handleSubmitForm)
+            }
         >
                 
             <InputForm 
@@ -52,7 +74,7 @@ export function LoginForm(){
                 required 
             />
 
-            <LinkForgotPassword>
+            <LinkForgotPassword onClick={() => navigateTo('/recover-pass')}>
                 Esqueceu a senha?
             </LinkForgotPassword>
                 
