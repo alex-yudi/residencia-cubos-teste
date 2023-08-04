@@ -1,15 +1,37 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export const Teste = styled.div`
-  background: gray;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  margin: 50px auto;
-  width: 1009px;
-  height: 400px;
+export const ContainerHeroLeft = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  border: 2px solid red;
-`;
+    width: 46.1875rem;
+    height: 23rem;
+    margin-right: 0.75rem;
+
+    border-radius: 0.5rem;
+    background: #FFF;
+`
+
+export const ImgHeroLeft = styled.img`
+    width: 9.375rem;
+    height: 8.16575rem;
+
+    margin-bottom: 2.65rem;
+`
+
+export const ContainerTextHero = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 0.75rem;
+    font-style: normal;
+    line-height: normal;
+`
+
+export const HighlightWord = styled.span`
+    font-weight: 700;
+    color: ${(props) => props.theme['highligthFontColor']}
+`

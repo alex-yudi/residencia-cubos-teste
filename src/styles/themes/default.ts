@@ -7,5 +7,11 @@ export const defaultTheme = {
   bgPage: '#D9E6F6',
   footerColor: '#BBCDE8',
   primaryFontColor: '#333',
-  linkFontColor: '#2E7BB4'
+  linkFontColor: '#2E7BB4',
+  highligthFontColor: '#D81D99',
+  bgHeroLeftLogin: '#fff',
+  primaryFontFamily: 'Rubik',
+  bgForm: '#F1F9FE',
+  titleFormColor: '#5A5A5A'
+
 } as const

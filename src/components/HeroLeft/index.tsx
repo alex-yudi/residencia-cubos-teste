@@ -1,47 +1,28 @@
-import { Teste } from './styles'
-import { useContextSelector } from 'use-context-selector'
+import { ContainerHeroLeft, ContainerTextHero,ImgHeroLeft, HighlightWord } from "./styles"
+import avatarHeroLeft from '../../assets/avatar-hero-left.svg'
 
-import { NewContext } from '../../stores/contexts/newStore'
+export function HeroLeft () {
+    return(
+        <ContainerHeroLeft>
+            <ImgHeroLeft src={avatarHeroLeft} alt="Desenho de pessoa mexendo em um computador." />
 
-export function HeroLeft() {
-  const input = useContextSelector(NewContext, 
-    (context) => {
-      return context.input
-  })
-  const setInput = useContextSelector(NewContext, 
-    (context) => {
-      return context.setInput
-  })
-
-  const handleOnChange = (event:any) => {
-    console.log(event.target.value)
-    setInput(event.target.value)
-  }
-
-  const handleOnSubmit = (event:any) => {
-    event.preventDefault();
-    setInput('')
-  }
-
-  return (
-   <Teste>
-    
-    <form onSubmit={handleOnSubmit}>
-
-    <input 
-      type="text" 
-      value={input}
-      onChange={handleOnChange}  
-    />
-    <button>
-      Salvar
-    </button>
-    </form>
-
-
-    <h2>
-
-    </h2>
-   </Teste>
-  )
+            <ContainerTextHero>
+                <p>
+                    <HighlightWord>
+                        Siga
+                    </HighlightWord> amigos e outros devs do seu interesse usando o botão seguir    
+                </p>
+                <p>
+                    <HighlightWord>
+                        Conheça
+                    </HighlightWord> novos devs e repositórios através da aba explorar
+                </p>
+                <p>
+                    <HighlightWord>
+                        Compartilhe
+                    </HighlightWord> ideias e soluções em um só lugar
+                </p>
+            </ContainerTextHero>
+        </ContainerHeroLeft>
+    )
 }

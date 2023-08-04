@@ -6,8 +6,12 @@ export const LayoutContainer = styled.div`
 
     min-width: 100%;
     min-height: 100vh;
-    padding: 212px 128px;
+    padding: 13rem 9.5rem;
 
     background: ${props => props.theme['bgPage']};
     color: ${props => props.theme['primaryFontColor']}
 `;
+
+export const BodyContainer = styled.div`
+    display: flex;
+`
