@@ -6,7 +6,7 @@ import {useForm} from 'react-hook-form'
 import * as z from 'zod'
 
 const loginFormSchema = z.object({
-    email: z.string().trim().toLowerCase(),
+    githubUser: z.string(),
     password: z.string()
 })
 
@@ -40,9 +40,9 @@ export function LoginForm(){
         >
                 
             <InputForm 
-                {...register('email')}
-                type="email"
-                placeholder='Digite seu e-mail'
+                {...register('githubUser')}
+                type="text"
+                placeholder='Digite seu usuário do Github'
                 required 
             />
             <InputForm 
