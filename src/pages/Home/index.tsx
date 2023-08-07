@@ -32,6 +32,7 @@ export function Home() {
  */
 
 import { Header } from '../../components/Header'
+import { SelectAction } from '../../components/SelectAction'
 import { WelcomeCard } from '../../components/WelcomeCard'
 
 import {
@@ -45,9 +46,8 @@ export function Home () {
 
       <HomeContainer>
 
-        <WelcomeCard>
-
-        </WelcomeCard>
+        <WelcomeCard />
+        <SelectAction />
 
       </HomeContainer>
     </>
