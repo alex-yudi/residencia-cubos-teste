@@ -12,6 +12,8 @@ export const defaultTheme = {
   bgHeroLeftLogin: '#fff',
   primaryFontFamily: 'Rubik',
   bgForm: '#F1F9FE',
-  titleFormColor: '#5A5A5A'
+  titleFormColor: '#5A5A5A',
+  headerBgColor: '#5C9ECF',
+  headerFontColor: "#fff"
 
 } as const

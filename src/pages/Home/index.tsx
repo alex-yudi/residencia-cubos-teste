@@ -1,4 +1,4 @@
-import { useContextSelector } from 'use-context-selector'
+/* import { useContextSelector } from 'use-context-selector'
 import { ExamplesContext } from '../../stores/contexts/counterStore'
 import { useSammary } from '../../stores/hooks/useSummary'
 import {
@@ -27,5 +27,25 @@ export function Home() {
         }</h2>
       </HomeContainer>
     </div>
+  )
+}
+ */
+
+import { Header } from '../../components/Header'
+
+import {
+  HomeContainer
+} from './styles'
+
+export function Home () {
+  return (
+    <>
+    <Header/>
+
+      <HomeContainer>
+        Olá da home
+
+      </HomeContainer>
+    </>
   )
 }
