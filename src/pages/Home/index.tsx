@@ -32,6 +32,7 @@ export function Home() {
  */
 
 import { Header } from '../../components/Header'
+import { LastRepositories } from '../../components/LastRepositories'
 import { SelectAction } from '../../components/SelectAction'
 import { WelcomeCard } from '../../components/WelcomeCard'
 
@@ -48,7 +49,7 @@ export function Home () {
 
         <WelcomeCard />
         <SelectAction />
-
+        <LastRepositories/>
       </HomeContainer>
     </>
   )
