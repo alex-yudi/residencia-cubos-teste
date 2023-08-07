@@ -1,20 +1,72 @@
-import * as NavigationMenu from '@radix-ui/react-navigation-menu'
-import { HeaderContainer } from './styles'
+import {
+  HeaderContainer,
+  LogoImg,
+  HeaderMenu,
+  HeaderMenuItems,
+  HeaderMenuItemsDivider,
+  HeaderLogoutAndSearch,
+  LogoutLink,
+  ContainerSearchBox,
+  InputSearchBox
+} from './styles'
+
+import logo from '../../assets/logo.svg'
+
+import { MagnifyingGlass } from 'phosphor-react'
 
 export function Header () {
   return (
   <HeaderContainer>
-    <NavigationMenu.Root className="NavigationMenuRoot">
-      <NavigationMenu.List className="NavigationMenuList">
 
-        <NavigationMenu.Item>
-           <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
-            Github
-           </NavigationMenu.Link>
-        </NavigationMenu.Item>
+    <HeaderMenu>
+      <LogoImg src={logo} alt="Logo da Rede Social" />
 
-      </NavigationMenu.List>
-    </NavigationMenu.Root>
+      <HeaderMenuItems>
+        Início
+      </HeaderMenuItems>
+
+      <HeaderMenuItemsDivider/>
+
+      <HeaderMenuItems>
+        Pull Requests
+      </HeaderMenuItems>
+
+      <HeaderMenuItemsDivider/>
+
+      <HeaderMenuItems>
+        Issues
+      </HeaderMenuItems>
+
+      <HeaderMenuItemsDivider/>
+
+      <HeaderMenuItems>
+        Marketplace
+      </HeaderMenuItems>
+
+      <HeaderMenuItemsDivider/>
+
+      <HeaderMenuItems>
+        Explore
+      </HeaderMenuItems>
+
+    </HeaderMenu>
+
+    <HeaderLogoutAndSearch>
+
+      <HeaderMenuItemsDivider/>
+
+      <LogoutLink>
+        Sair
+      </LogoutLink>
+
+      <ContainerSearchBox>
+        <MagnifyingGlass size={19}/>
+        <InputSearchBox
+          placeholder='Pesquisar no Login'
+        />
+      </ContainerSearchBox>
+    </HeaderLogoutAndSearch>
+
   </HeaderContainer>
   )
 }

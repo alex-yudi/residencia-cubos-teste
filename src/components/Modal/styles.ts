@@ -54,7 +54,7 @@ export const Content = styled(Dialog.Content)`
       }
 
       &:not(:disabled):hover {
-        background: ${(props) => props.theme.purple100};
+        background: ${(props) => props.theme.primaryFontColor};
         transition: background-color 0.2s;
       }
     }
