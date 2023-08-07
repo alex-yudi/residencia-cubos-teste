@@ -1,22 +1,20 @@
-import { HeaderContainer, HeaderContent, NewExampleButton } from './styles'
-import logoImg from '../../assets/logo.svg'
-import * as Dialog from '@radix-ui/react-dialog'
-import { NewExampleModal } from '../Modal'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import { HeaderContainer} from './styles'
 
 export function Header() {
   return (
-    <HeaderContainer>
-      <HeaderContent>
-        <img src={logoImg} alt="" />
+  <HeaderContainer>
+    <NavigationMenu.Root className="NavigationMenuRoot">
+      <NavigationMenu.List className="NavigationMenuList">
 
-        <Dialog.Root>
-          <Dialog.Trigger asChild>
-            <NewExampleButton>Novo Calculo</NewExampleButton>
-          </Dialog.Trigger>
+        <NavigationMenu.Item>
+           <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
+            Github
+           </NavigationMenu.Link>
+        </NavigationMenu.Item>
 
-          <NewExampleModal />
-        </Dialog.Root>
-      </HeaderContent>
-    </HeaderContainer>
+      </NavigationMenu.List>
+    </NavigationMenu.Root>
+  </HeaderContainer>
   )
 }
