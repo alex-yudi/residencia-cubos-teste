@@ -6,6 +6,7 @@ export const ContainerSelectAction = styled.div`
 
     margin-top: 1.95rem;
     padding: 2rem 1.5rem;
+    border-radius: 0.5rem;
 
     background-color: ${props => props.theme.primaryBgCards};
 `

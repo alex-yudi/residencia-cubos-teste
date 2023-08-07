@@ -6,6 +6,7 @@ export const ContainerLastRepositories = styled.div`
 
     margin-top: 1.88rem;
     padding: 1.2rem 1.44rem;
+    border-radius: 0.5rem;
 
     background-color: ${props => props.theme.primaryBgCards};
 `

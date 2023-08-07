@@ -9,6 +9,7 @@ export const ContainerWelcomeCard = styled.div`
     height: 11.75rem;
 
     padding: 1.5rem;
+    border-radius: 0.5rem;
 
     background-color: ${(props) => props.theme.primaryBgCards};
 `

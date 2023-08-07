@@ -7,10 +7,10 @@ export const RepositoryInfo = styled.div`
 
     width: 35.8125rem;
     height: 3.94rem;
-    background-color: ${props => props.theme.bgPage};
-
+    
     border-bottom: 0.0625rem solid #f4f4f4;
-
+    
+    background-color: ${props => props.theme.bgPage};
     &:first-of-type{
         border-radius: 0.5rem 0.5rem 0 0;
     }
