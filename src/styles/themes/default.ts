@@ -14,5 +14,6 @@ export const defaultTheme = {
   bgForm: '#F1F9FE',
   titleFormColor: '#5A5A5A',
   headerBgColor: '#5C9ECF',
-  headerFontColor: '#fff'
+  headerFontColor: '#fff',
+  primaryBgCards: '#fff'
 } as const

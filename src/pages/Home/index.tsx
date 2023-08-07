@@ -32,6 +32,7 @@ export function Home() {
  */
 
 import { Header } from '../../components/Header'
+import { WelcomeCard } from '../../components/WelcomeCard'
 
 import {
   HomeContainer
@@ -43,7 +44,10 @@ export function Home () {
     <Header/>
 
       <HomeContainer>
-        Olá da home
+
+        <WelcomeCard>
+
+        </WelcomeCard>
 
       </HomeContainer>
     </>
