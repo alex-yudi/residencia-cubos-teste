@@ -40,6 +40,7 @@ import { UserCard } from '../../components/UserCard'
 import {
   HomeContainer, PageBody
 } from './styles'
+import { CardFollow } from '../../components/CardFollow'
 
 export function Home () {
   return (
@@ -52,6 +53,8 @@ export function Home () {
         <SelectAction />
         <LastRepositories/>
       </HomeContainer>
+      <CardFollow
+        />
     </PageBody>
     </>
   )

@@ -8,7 +8,7 @@ export const ContainerUserCard = styled.aside`
     width: 13rem;
     height: 34.0625rem;
     border-radius: 0.5rem;
-    padding: 0 0.5rem;
+    padding: 1.2rem 0.5rem;
 
     background-color: ${props => props.theme.primaryBgCards};
     color: ${props => props.theme.linkFontColor}
