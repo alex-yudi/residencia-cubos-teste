@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 
+export const PageBody = styled.div`
+  display: flex;
+  padding: 1.5rem 8rem;
+`
+
 export const HomeContainer = styled.main`
   width: 100%;
   margin: 4rem auto 0;
   max-width: 1120px;
-  padding: 0 1.5rem;
+  margin: 0 1rem;
 `

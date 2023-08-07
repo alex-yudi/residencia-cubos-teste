@@ -35,22 +35,24 @@ import { Header } from '../../components/Header'
 import { LastRepositories } from '../../components/LastRepositories'
 import { SelectAction } from '../../components/SelectAction'
 import { WelcomeCard } from '../../components/WelcomeCard'
+import { UserCard } from '../../components/UserCard'
 
 import {
-  HomeContainer
+  HomeContainer, PageBody
 } from './styles'
 
 export function Home () {
   return (
     <>
     <Header/>
-
+    <PageBody>
+      <UserCard/>
       <HomeContainer>
-
         <WelcomeCard />
         <SelectAction />
         <LastRepositories/>
       </HomeContainer>
+    </PageBody>
     </>
   )
 }

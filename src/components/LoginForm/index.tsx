@@ -40,7 +40,7 @@ export function LoginForm () {
       const { data: responseApi } = await api.get(`/${githubUser}`)
 
       localStorage.setItem('githubUser', githubUser)
-
+      console.log(responseApi)
       navigateTo('/home')
       reset()
     } catch (error:any) {
