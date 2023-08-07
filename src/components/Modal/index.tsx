@@ -11,9 +11,8 @@ import {
   Content,
   Overlay,
   ExampleType,
-  ExampleTypeButton,
+  ExampleTypeButton
 } from './styles'
-
 
 import { ExamplesContext } from '../../stores/contexts/counterStore'
 
@@ -21,17 +20,17 @@ const newExampleFormSchema = z.object({
   description: z.string(),
   valueOne: z.number(),
   valueTwo: z.number(),
-  type: z.enum(['addition', 'subtraction']),
+  type: z.enum(['addition', 'subtraction'])
 })
 
 type NewExampleFormInputs = z.infer<typeof newExampleFormSchema>
 
-export function NewExampleModal() {
+export function NewExampleModal () {
   const createCount = useContextSelector(
     ExamplesContext,
     (context) => {
       return context.createCount
-    },
+    }
   )
 
   const {
@@ -39,16 +38,16 @@ export function NewExampleModal() {
     control,
     register,
     handleSubmit,
-    formState: { isSubmitting },
+    formState: { isSubmitting }
   } = useForm<NewExampleFormInputs>({
     resolver: zodResolver(newExampleFormSchema),
     defaultValues: {
-      type: 'addition',
-    },
+      type: 'addition'
+    }
   })
 
-  async function handleCreateNewExample(data: NewExampleFormInputs) {
-    console.log('entrei');
+  async function handleCreateNewExample (data: NewExampleFormInputs) {
+    console.log('entrei')
 
     const { valueTwo, description, valueOne, type } = data
 
@@ -57,17 +56,17 @@ export function NewExampleModal() {
       valueTwo,
       valueOne,
       type,
-      createdAt: new Date(),
+      createdAt: new Date()
     }
 
-    await createCount(newExample) /*Com uma api criada, envia para registro em BD da conta realizada.*/
+    await createCount(newExample) /* Com uma api criada, envia para registro em BD da conta realizada. */
 
     reset()
   }
 
   return (
     <Dialog.Portal> {/* A Dialog é o Modal do RadixUi */}
-      <Overlay /> {/* O Overlay é criado no styles, trata-se do fundo do Modal.*/}
+      <Overlay /> {/* O Overlay é criado no styles, trata-se do fundo do Modal. */}
 
       <Content>
         <Dialog.Title>Novo Calculo</Dialog.Title>

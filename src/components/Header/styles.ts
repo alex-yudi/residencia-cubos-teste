@@ -5,6 +5,6 @@ export const HeaderContainer = styled.header`
   height: 3rem;
   padding: 2.5rem 0 7.5rem;
 
-  background: ${(props) => props.theme['headerBgColor']};
-  color: ${(props) => props.theme['headerFontColor']};
+  background: ${(props) => props.theme.headerBgColor};
+  color: ${(props) => props.theme.headerFontColor};
 `

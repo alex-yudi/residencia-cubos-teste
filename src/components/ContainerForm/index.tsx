@@ -1,4 +1,4 @@
-import { FormContainer, FormTitle,ContainerInputs, InputForm, LinkForgotPassword, Button } from './style'
+import { FormContainer, FormTitle, ContainerInputs, Button } from './style'
 import { ReactElement } from 'react'
 
 interface PropsContainerForm {
@@ -8,8 +8,8 @@ interface PropsContainerForm {
     handleSubmitComponent: any;
 }
 
-export function ContainerForm(props: PropsContainerForm) {
-    return(
+export function ContainerForm (props: PropsContainerForm) {
+  return (
         <FormContainer onSubmit={props.handleSubmitComponent}>
             <FormTitle>
             {props.title}
@@ -23,5 +23,5 @@ export function ContainerForm(props: PropsContainerForm) {
                 {props.buttonText}
             </Button>
         </FormContainer>
-    )
+  )
 }

@@ -25,21 +25,21 @@ interface ExampleContextType { // Tipagem
 }
 
 interface CounterStoreProviderProps { // Tipagem
-  children: ReactNode 
+  children: ReactNode
 }
 
 export const ExamplesContext = createContext<ExampleContextType>( // Criação do contexto que será aplicado no hook, nesse caso é preciso declarar a interface de um objeto para poder utilizar a criação do contexto, pois informaremos na tipagem qual é o tipo de contexto que está sendo exportado.
-  {} as ExampleContextType,
+  {} as ExampleContextType
 )
 
-export function ExampleProvider({ children }: CounterStoreProviderProps) {
+export function ExampleProvider ({ children }: CounterStoreProviderProps) {
   const [results, setResults] = useState<Result[]>([]) // Criação dos states que serão usados no contexto, faço a tipagem do state que está sendo utilizado, nesse caso, o Result[] indica que haverá um array de elementos do tipo Result.
   const [result, setResult] = useState<Result>({ // Criação dos states que serão usados no contexto
     description: 'test',
     type: 'addition',
     valueOne: 1,
     valueTwo: 2,
-    createdAt: new Date(),
+    createdAt: new Date()
   })
 
   const fetchExample = useCallback(async (query?: string) => { // Não está fazendo nada, porém faz a requisição na renderização, por causa do [] vazio.
@@ -47,8 +47,8 @@ export function ExampleProvider({ children }: CounterStoreProviderProps) {
       params: {
         _sort: 'createdAt',
         _order: 'desc',
-        q: query,
-      },
+        q: query
+      }
     })
 
     setResult(response.data)
@@ -70,19 +70,18 @@ export function ExampleProvider({ children }: CounterStoreProviderProps) {
 
       // setResults((oldState) => [response.data, ...oldState])
 
-
       const response = {
         description,
         valueOne,
         valueTwo,
         type,
-        createdAt: new Date(),
+        createdAt: new Date()
       }
       setResults((oldState) => [response, ...oldState])
 
       setResult(response)
     },
-    [],
+    []
   )
 
   useEffect(() => {

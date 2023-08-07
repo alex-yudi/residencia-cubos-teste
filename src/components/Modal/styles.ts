@@ -14,7 +14,7 @@ export const Content = styled(Dialog.Content)`
   min-width: 32rem;
   border-radius: 6px;
   padding: 2.5rem 3rem;
-  background: ${(props) => props.theme['gray900']};
+  background: ${(props) => props.theme.gray900};
   position: fixed;
   top: 50%;
   left: 50%;
@@ -29,18 +29,18 @@ export const Content = styled(Dialog.Content)`
     input {
       border-radius: 6px;
       border: 0;
-      background: ${(props) => props.theme['white100']};
-      color: ${(props) => props.theme['gray900']};
+      background: ${(props) => props.theme.white100};
+      color: ${(props) => props.theme.gray900};
       padding: 1rem;
       &::placeholder {
-        color: ${(props) => props.theme['purple500']};
+        color: ${(props) => props.theme.purple500};
       }
     }
 
     button[type='submit'] {
       height: 58px;
       border: 0;
-      background: ${(props) => props.theme['purple500']};
+      background: ${(props) => props.theme.purple500};
       color: ${(props) => props.theme.white100};
       font-weight: bold;
       padding: 0 1.25rem;
@@ -54,7 +54,7 @@ export const Content = styled(Dialog.Content)`
       }
 
       &:not(:disabled):hover {
-        background: ${(props) => props.theme['purple100']};
+        background: ${(props) => props.theme.purple100};
         transition: background-color 0.2s;
       }
     }
@@ -69,7 +69,7 @@ export const CloseButton = styled(Dialog.Close)`
   right: 1.5rem;
   line-height: 0;
   cursor: pointer;
-  color: ${(props) => props.theme['white100']};
+  color: ${(props) => props.theme.white100};
 `
 
 export const ExampleType = styled(RadioGroup.Root)`
@@ -84,9 +84,9 @@ interface ExampleTypeButtonProps {
 }
 
 export const ExampleTypeButton = styled(
-  RadioGroup.Item,
+  RadioGroup.Item
 ) <ExampleTypeButtonProps>`
-  background: ${(props) => props.theme['purple500']};
+  background: ${(props) => props.theme.purple500};
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -95,12 +95,12 @@ export const ExampleTypeButton = styled(
   border-radius: 6px;
   cursor: pointer;
   border: 0;
-  color: ${(props) => props.theme['white100']};
+  color: ${(props) => props.theme.white100};
   svg {
     color: ${(props) =>
     props.variant === 'addition'
-      ? props.theme['gray900']
-      : props.theme['white100']};
+      ? props.theme.gray900
+      : props.theme.white100};
   }
   &[data-state='unchecked']:hover {
     transition: background-color 0.2s;
@@ -110,8 +110,8 @@ export const ExampleTypeButton = styled(
     color: ${(props) => props.theme.white100};
     background: ${(props) =>
     props.variant === 'addition'
-      ? props.theme['purple100']
-      : props.theme['purple100']};
+      ? props.theme.purple100
+      : props.theme.purple100};
   }
   svg {
     color: ${(props) => props.theme.white100};

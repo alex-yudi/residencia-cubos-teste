@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const LayoutContainer = styled.div`
     display: flex;
@@ -8,8 +8,8 @@ export const LayoutContainer = styled.div`
     min-height: 100vh;
     padding: 13rem 9.5rem;
 
-    background: ${props => props.theme['bgPage']};
-    color: ${props => props.theme['primaryFontColor']};
+    background: ${props => props.theme.bgPage};
+    color: ${props => props.theme.primaryFontColor};
 
     @media(max-width: 420px) {
         padding: 0.94rem;

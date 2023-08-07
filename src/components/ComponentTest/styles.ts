@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Teste = styled.div`
   background: gray;
@@ -12,4 +12,4 @@ export const Teste = styled.div`
   height: 400px;
 
   border: 2px solid red;
-`;
+`

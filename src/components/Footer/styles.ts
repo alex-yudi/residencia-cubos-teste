@@ -11,7 +11,7 @@ export const FooterContainer = styled.footer`
     border-radius: 0.5rem;
 
 
-    background: ${(props) => props.theme['footerColor']};
+    background: ${(props) => props.theme.footerColor};
 
     font-size: 0.75rem;
     line-height: normal;
@@ -42,7 +42,7 @@ export const LinkFooter = styled.a`
     font-style: normal;
     line-height: normal;
 
-    color: ${(props) => props.theme['linkFontColor']};
+    color: ${(props) => props.theme.linkFontColor};
 
     &:hover {
         cursor: pointer;

@@ -1,7 +1,7 @@
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import { HeaderContainer} from './styles'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import { HeaderContainer } from './styles'
 
-export function Header() {
+export function Header () {
   return (
   <HeaderContainer>
     <NavigationMenu.Root className="NavigationMenuRoot">

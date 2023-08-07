@@ -48,9 +48,9 @@ export function Login() {
 }
  */
 
-import { LoginForm } from "../../components/LoginForm";
+import { LoginForm } from '../../components/LoginForm'
 
-export function Login() {
+export function Login () {
   return (
     <LoginForm/>
   )

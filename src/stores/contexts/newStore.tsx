@@ -1,6 +1,6 @@
 
 import { ReactNode, useState, Dispatch, SetStateAction } from 'react'
-import {createContext} from 'use-context-selector'
+import { createContext } from 'use-context-selector'
 
 interface NewStoreProviderProps {
   children: ReactNode
@@ -13,13 +13,12 @@ interface NewContextType { // Aqui eu preciso declarar o tipo pois estou definin
 
 export const NewContext = createContext<NewContextType>({ } as NewContextType)
 
-export function NewProvider({children}: NewStoreProviderProps) {
+export function NewProvider ({ children }: NewStoreProviderProps) {
   const [input, setInput] = useState<string>('')
 
-
-  return(
+  return (
     <NewContext.Provider
-      value={{input, setInput}}
+      value={{ input, setInput }}
     >
       {children}
     </NewContext.Provider>

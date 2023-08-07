@@ -1,7 +1,7 @@
-import { SignUpForm } from "../../components/SignUpForm";
+import { SignUpForm } from '../../components/SignUpForm'
 
-export function SignUp() {
-    return(
+export function SignUp () {
+  return (
         <SignUpForm/>
-    )
+  )
 }

@@ -3,15 +3,15 @@ import { useContextSelector } from 'use-context-selector'
 
 import { NewContext } from '../../stores/contexts/newStore'
 
-export function HeroLeft() {
-  const input = useContextSelector(NewContext, 
+export function HeroLeft () {
+  const input = useContextSelector(NewContext,
     (context) => {
       return context.input
-  })
-  const setInput = useContextSelector(NewContext, 
+    })
+  const setInput = useContextSelector(NewContext,
     (context) => {
       return context.setInput
-  })
+    })
 
   const handleOnChange = (event:any) => {
     console.log(event.target.value)
@@ -19,25 +19,24 @@ export function HeroLeft() {
   }
 
   const handleOnSubmit = (event:any) => {
-    event.preventDefault();
+    event.preventDefault()
     setInput('')
   }
 
   return (
    <Teste>
-    
+
     <form onSubmit={handleOnSubmit}>
 
-    <input 
-      type="text" 
+    <input
+      type="text"
       value={input}
-      onChange={handleOnChange}  
+      onChange={handleOnChange}
     />
     <button>
       Salvar
     </button>
     </form>
-
 
     <h2>
 

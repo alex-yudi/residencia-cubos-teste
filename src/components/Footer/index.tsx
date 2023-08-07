@@ -1,9 +1,9 @@
-import {FooterContainer, LinkFooter} from './styles'
+import { FooterContainer, LinkFooter } from './styles'
 
-export function Footer() {
-    return (
+export function Footer () {
+  return (
         <FooterContainer>
-            © 2022 Login - &nbsp; 
+            © 2022 Login - &nbsp;
             <LinkFooter> Sobre o login </LinkFooter>
             &nbsp;-&nbsp;
             <LinkFooter> Centro de segurança </LinkFooter>
@@ -12,5 +12,5 @@ export function Footer() {
             &nbsp;-&nbsp;
             <LinkFooter> Contato </LinkFooter>
         </FooterContainer>
-    )
+  )
 }

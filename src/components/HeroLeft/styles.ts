@@ -46,5 +46,5 @@ export const ContainerTextHero = styled.div`
 
 export const HighlightWord = styled.span`
     font-weight: 700;
-    color: ${(props) => props.theme['highligthFontColor']}
+    color: ${(props) => props.theme.highligthFontColor}
 `

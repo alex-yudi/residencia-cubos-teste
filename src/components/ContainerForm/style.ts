@@ -10,7 +10,7 @@ export const FormContainer = styled.form`
     height: 23rem;
 
     border-radius: 0.5rem;
-    background: ${(props) => props.theme['bgForm']};
+    background: ${(props) => props.theme.bgForm};
 
     @media(max-width: 1180px) {
         min-width: 45%;
@@ -31,7 +31,7 @@ export const FormTitle = styled.p`
     font-weight: 400;
     line-height: normal;
   
-    color: ${(props) => props.theme['titleFormColor']};
+    color: ${(props) => props.theme.titleFormColor};
 `
 
 export const ContainerInputs = styled.div`

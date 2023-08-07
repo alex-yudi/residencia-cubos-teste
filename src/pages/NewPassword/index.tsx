@@ -1,7 +1,7 @@
-import { NewPasswordForm } from "../../components/NewPasswordForm"
+import { NewPasswordForm } from '../../components/NewPasswordForm'
 
-export function NewPassword() {
-    return(
+export function NewPassword () {
+  return (
         <NewPasswordForm/>
-    )
+  )
 }
