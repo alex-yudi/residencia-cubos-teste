@@ -11,3 +11,9 @@ export const HomeContainer = styled.main`
   max-width: 1120px;
   margin: 0 1rem;
 `
+export const FollowContainer = styled.aside`
+  display: flex;
+  flex-direction: column;
+
+
+`

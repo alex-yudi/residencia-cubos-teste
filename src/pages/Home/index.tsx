@@ -38,6 +38,7 @@ import { WelcomeCard } from '../../components/WelcomeCard'
 import { UserCard } from '../../components/UserCard'
 
 import {
+  FollowContainer,
   HomeContainer, PageBody
 } from './styles'
 import { CardFollow } from '../../components/CardFollow'
@@ -53,8 +54,17 @@ export function Home () {
         <SelectAction />
         <LastRepositories/>
       </HomeContainer>
-      <CardFollow
+
+      <FollowContainer>
+        <CardFollow
+          type='Seguindo'
+          quantity={'216'}
+          />
+        <CardFollow
+          type='Seguidores'
+          quantity={'1.1k'}
         />
+      </FollowContainer>
     </PageBody>
     </>
   )

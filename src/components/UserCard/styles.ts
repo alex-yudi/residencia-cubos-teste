@@ -11,7 +11,7 @@ export const ContainerUserCard = styled.aside`
     padding: 1.2rem 0.5rem;
 
     background-color: ${props => props.theme.primaryBgCards};
-    color: ${props => props.theme.linkFontColor}
+    color: ${props => props.theme.linkFontColor};
 `
 
 export const UserImg = styled.img`
